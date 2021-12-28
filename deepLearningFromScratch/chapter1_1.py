@@ -1,3 +1,5 @@
+# 출처: Deep Learning from Scratch
+
 class Man:
     def __init__(self, name):
         self.name = name
