@@ -24,19 +24,19 @@ public class SieveOfEratosthenes_re {
         for(int i=2; i<=N; i++){
             if(count==K){
                 break;
-            }
-            for(int j=i; j<=N; j+=i){
-                if(arr[j]==false){
-                    arr[j] = true;
-                    count++;
-                }
-                if(count==K){
-                    bw.write(j + "\n");
-                    break;
+            }else{
+                for(int j=i; j<=N; j+=i){
+                    if(!arr[j]){
+                        arr[j] = true;
+                        count++;
+                    }
+                    if(count==K){
+                        bw.write(j + "\n");
+                        break;
+                    }
                 }
             }
         }
-        br.close();
         bw.flush();
         bw.close();
     }

@@ -8,6 +8,7 @@ import java.util.Arrays;
 public class ATM_re {
     public static void main(String[] args) throws IOException{
         // 런타임 에러납니다. 나중에 10문제 풀고 질문 게시판에 올려보세요.
+        // 답변 받았습니다. → bufferedReader가 한 줄로 받기때문에 split으로 구분을 해주고 하나씩 입력하는 형태로 만들어줘야 한다고 합니다.
         // ATM 문제
         // ATM은 오직 한 대
         // 사람의 수는 N(1<=N<=1,000)
@@ -19,8 +20,13 @@ public class ATM_re {
         int N = Integer.parseInt(br.readLine());
         int[] P = new int[N];
 
-        for(int i=0; i<N; i++){
-            P[i] = Integer.parseInt(br.readLine());
+        // for(int i=0; i<N; i++){
+        //     P[i] = Integer.parseInt(br.readLine());
+        // } // java 11에서 이렇게 하면 입력한 값 3 1 2 3 4 가 한글자씩이 아니라 한 줄로 인식이 되기에 split으로 나눠줘야 한다고 합니다.
+
+        int P_index= 0;
+        for ( String numberString : br.readLine().split(" ") ){
+            P[P_index++] = Integer.parseInt(numberString);
         }
 
         Arrays.sort(P);
