@@ -5,6 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch ATM_re",
+            "request": "launch",
+            "mainClass": "ATM_re",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
+            "name": "Launch SieveOfEratosthenes",
+            "request": "launch",
+            "mainClass": "SieveOfEratosthenes",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
+            "name": "Launch SieveOfEratosthenes_re",
+            "request": "launch",
+            "mainClass": "SieveOfEratosthenes_re",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
             "name": "g++.exe - 활성 파일 빌드 및 디버그",
             "type": "cppdbg",
             "request": "launch",
