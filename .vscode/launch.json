@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Resignation",
+            "request": "launch",
+            "mainClass": "Resignation",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
+            "name": "Launch Resignation_re",
+            "request": "launch",
+            "mainClass": "Resignation_re",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
             "name": "Launch GroupWordCheck_re",
             "request": "launch",
             "mainClass": "GroupWordCheck_re",
