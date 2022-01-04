@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class ATM_re {
     public static void main(String[] args) throws IOException{
         // 런타임 에러납니다. 나중에 10문제 풀고 질문 게시판에 올려보세요.
-        // 답변 받았습니다. → bufferedReader가 한 줄로 받기때문에 split으로 구분을 해주고 하나씩 입력하는 형태로 만들어줘야 한다고 합니다.
+        // N 한 줄, P 한 줄 넣어야 되는데 P를 원소마다 한 줄씩 입력했기에 런타임 에러가 났습니다.
         // ATM 문제
         // ATM은 오직 한 대
         // 사람의 수는 N(1<=N<=1,000)
@@ -22,11 +23,16 @@ public class ATM_re {
 
         // for(int i=0; i<N; i++){
         //     P[i] = Integer.parseInt(br.readLine());
-        // } // java 11에서 이렇게 하면 입력한 값 3 1 2 3 4 가 한글자씩이 아니라 한 줄로 인식이 되기에 split으로 나눠줘야 한다고 합니다.
+        // } // P를 한 줄씩 입력하기에 런타임 에러가 났습니다.
 
-        int P_index= 0;
-        for ( String numberString : br.readLine().split(" ") ){
-            P[P_index++] = Integer.parseInt(numberString);
+        // int P_index= 0;
+        // for (String numberString : br.readLine().split(" ")){
+        //     P[P_index++] = Integer.parseInt(numberString);
+        // } // baekjoon 질문에 대한 답변 코드
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for(int i=0; i<N; i++){
+            P[i] = Integer.parseInt(st.nextToken());
         }
 
         Arrays.sort(P);

@@ -5,53 +5,31 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch MyQueue2",
+            "request": "launch",
+            "mainClass": "MyQueue2",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
+            "name": "Launch QueueProblem",
+            "request": "launch",
+            "mainClass": "QueueProblem",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
-        },
-        {
-            "type": "java",
-            "name": "Launch Resignation",
-            "request": "launch",
-            "mainClass": "Resignation",
-            "projectName": "visualStudioWorkspace_6b4bcb26"
-        },
-        {
-            "type": "java",
-            "name": "Launch Resignation_re",
-            "request": "launch",
-            "mainClass": "Resignation_re",
-            "projectName": "visualStudioWorkspace_6b4bcb26"
-        },
-        {
-            "type": "java",
-            "name": "Launch GroupWordCheck_re",
-            "request": "launch",
-            "mainClass": "GroupWordCheck_re",
-            "projectName": "visualStudioWorkspace_6b4bcb26"
-        },
-        {
-            "type": "java",
-            "name": "Launch ATM_re",
-            "request": "launch",
-            "mainClass": "ATM_re",
-            "projectName": "visualStudioWorkspace_6b4bcb26"
-        },
-        {
-            "type": "java",
-            "name": "Launch SieveOfEratosthenes",
-            "request": "launch",
-            "mainClass": "SieveOfEratosthenes",
-            "projectName": "visualStudioWorkspace_6b4bcb26"
-        },
-        {
-            "type": "java",
-            "name": "Launch SieveOfEratosthenes_re",
-            "request": "launch",
-            "mainClass": "SieveOfEratosthenes_re",
-            "projectName": "visualStudioWorkspace_6b4bcb26"
         },
         {
             "name": "g++.exe - 활성 파일 빌드 및 디버그",
