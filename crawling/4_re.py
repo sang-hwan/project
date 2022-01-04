@@ -24,7 +24,7 @@ import re
 p = re.compile("ca.e")
 # . (ca.e) : 하나의 문자를 의미 > care, cafe, case (O) | caffe (X)
 # ^ (^de)  : 문자열의 시작 > desk, destination (O) | fade (X)
-# $ (se&)  : 문자열의 끝 > case, base (O) | sea (X)
+# $ (se$)  : 문자열의 끝 > case, base (O) | sea (X)
 
 def print_match(m):
     if m:
