@@ -9,7 +9,8 @@ public class GroupWordCheck_re {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     
-    public static void main(String[] args) throws IOException{        
+    public static void main(String[] args) throws IOException{       
+        // 출처: https://www.acmicpc.net/problem/1316
         // 그룹 단어 체커 문제
         // 그룹 단어 체커: 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우
         // 단어 N개를 입력 받아 그룹 단어의 개수를 출력

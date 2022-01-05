@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 public class SieveOfEratosthenes_re {
     public static void main(String[] args) throws IOException{
+        // 출처: https://www.acmicpc.net/problem/2960
         // 런타임 에러납니다. 나중에 10문제 풀고 질문 게시판에 올려보세요.
         // N과 K를 한 줄에 모두 입력해야 되는데 두 줄에 걸쳐서 입력했기에 오류가 났습니다.
         // 에라토스테네스의 체 문제

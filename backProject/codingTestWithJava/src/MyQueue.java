@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -13,6 +15,7 @@ public class MyQueue {
         // https://velog.io/@cheal3/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10845-%ED%81%90-%EC%9E%90%EB%B0%94
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
         StringBuilder sb = new StringBuilder();
 
@@ -49,6 +52,8 @@ public class MyQueue {
             }
         }
         
-        System.out.println(sb.toString());
+        bw.write(sb.toString());
+        bw.flush();
+        bw.close();
     }    
 }

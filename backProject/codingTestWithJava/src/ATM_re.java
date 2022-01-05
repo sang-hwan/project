@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 
 public class ATM_re {
     public static void main(String[] args) throws IOException{
+        // 출처: https://www.acmicpc.net/problem/11399
         // 런타임 에러납니다. 나중에 10문제 풀고 질문 게시판에 올려보세요.
         // N 한 줄, P 한 줄 넣어야 되는데 P를 원소마다 한 줄씩 입력했기에 런타임 에러가 났습니다.
         // ATM 문제

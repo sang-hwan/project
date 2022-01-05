@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GreatestCommonFactor_limit",
+            "request": "launch",
+            "mainClass": "GreatestCommonFactor_limit",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
+            "name": "Launch GreatestCommonFactor",
+            "request": "launch",
+            "mainClass": "GreatestCommonFactor",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
+            "name": "Launch TowerOfHanoi",
+            "request": "launch",
+            "mainClass": "TowerOfHanoi",
+            "projectName": "visualStudioWorkspace_6b4bcb26"
+        },
+        {
+            "type": "java",
             "name": "Launch MyQueue2",
             "request": "launch",
             "mainClass": "MyQueue2",

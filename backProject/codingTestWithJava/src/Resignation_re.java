@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 public class Resignation_re {
     public static void main(String[] args) throws IOException{
+        // 출처: https://www.acmicpc.net/problem/14501
         // 퇴사 문제
         // N+1일째 퇴사
         // 날마다 업무 기간 T_i와 금액 P_i 를 정한다
