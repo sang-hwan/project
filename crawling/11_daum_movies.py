@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+# 출처: https://www.youtube.com/watch?v=yQ20jZwDjTE&t=1035s&ab_channel=%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9
 
 for year in range(2015, 2020):
 
