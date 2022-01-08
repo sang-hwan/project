@@ -1,3 +1,4 @@
+package BFSnDFS;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -7,32 +8,34 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class MazeExploration{
+public class MazeExplorationBFS{
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static int N;
     static int M;
     static int[][] maze;
-    static String[] mazeY;
     static boolean[][] check;
-    static int[] dx = {-1, 1, 0, 0}; // x 방향 - 좌우
-    static int[] dy = {0, 0, -1, 1}; // y 방향 - 상하
+    static int[] dx = {0, 0, -1, 1}; // x 방향 - 좌우
+    static int[] dy = {-1, 1, 0, 0}; // y 방향 - 상하
 
     public static void main(String[] args) throws IOException{
         // 출처:
+        // https://www.acmicpc.net/problem/2178
         // https://wiselog.tistory.com/163
         // 미로탐색 문제
         
+        // 미로 크기
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
+        // 미로 생성
         maze = new int[N][M];
         for(int i=0; i<N; i++){
-            String s = br.readLine();
+            String mazeX = br.readLine();
             for(int j=0; j<M; j++){
-                maze[i][j] = s.charAt(j) - '0';
+                maze[i][j] = mazeX.charAt(j) - '0';
             }
         }
 
@@ -66,7 +69,6 @@ public class MazeExploration{
                 queue.offer(nextY);
                 maze[nextX][nextY] = maze[nowX][nowY] + 1;
                 check[nextX][nextY] = true;
-
             }
         }
     }
