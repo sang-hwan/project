@@ -12,18 +12,39 @@ const dragged = {
     index: null
 }
 
-setGame();
+let isPlaying = false;
+let timeInterval = null;
+let time = 0;
 
 // function
 
+function checkStatus(){
+    const currentList = [...container.children];
+    const unMatchedList = currentList.filter((child, index)=>Number(child.getAttribute("data-index")) !== index);
+    if(unMatchedList.length===0){
+        gameText.style.display = "block";
+        isPlaying = false;
+        clearInterval(timeInterval);
+    }
+}
+
 function setGame(){
+    isPlaying = true;
+    time = 0;
     container.innerHTML = "";
+    gameText.style.display = 'none';
+    clearInterval(timeInterval);
+    
     tiles = createImageTiles();
     tiles.forEach(tile=>container.appendChild(tile));
     setTimeout(()=>{
         container.innerHTML = "";
         shuffle(tiles).forEach(tile=>container.appendChild(tile));
-    }, 2000);
+        timeInterval = setInterval(() => {
+            playTime.innerText = time;
+            time++;
+        }, 1000);
+    }, 5000);
 }
 
 function createImageTiles(){
@@ -50,14 +71,38 @@ function shuffle(array){
 
 // events
 container.addEventListener('dragstart', e=>{
-    dragged.el = e.target;
-    dragged.class = e.target.className;
-    dragged.index = [...e.target.parentNode.children].indexOf();
-    console.log(typeof e.target.parentNode.children);
+    if(!isPlaying) return;
+    const obj = e.target
+    dragged.el = obj;
+    dragged.class = obj.className;
+    dragged.index = [...obj.parentNode.children].indexOf(obj);
 });
+
 container.addEventListener('dragover', e=>{
     e.preventDefault();
 });
+
 container.addEventListener('drop', e=>{
-    // console.log('dropped');
+    if(!isPlaying) return;
+    const obj = e.target;
+    if(obj.className!==dragged.class){
+        let originPlace;
+        let isLast = false;
+    
+        if(dragged.el.nextSibling){
+            originPlace = dragged.el.nextSibling;
+        }else{
+            originPlace = dragged.el.previousSibling;
+            isLast = true;
+        }
+        const droppedIndex = [...obj.parentNode.children].indexOf(obj);
+        dragged.index > droppedIndex ? obj.before(dragged.el):obj.after(dragged.el);
+        isLast ? originPlace.after(obj) : originPlace.before(obj);
+    }
+
+    checkStatus();
 });
+
+startButton.addEventListener('click', ()=>{
+    setGame()
+})
