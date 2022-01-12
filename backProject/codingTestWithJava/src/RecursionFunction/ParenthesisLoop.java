@@ -15,9 +15,11 @@ public class ParenthesisLoop{
         // 출처:
         // https://www.acmicpc.net/problem/2504
         // https://velog.io/@booorim98/BOJ-2504
+        // https://loosie.tistory.com/349
 
         String inputValue = br.readLine();
 
+        boolean flag = true;
         int mul = 1;
         int result = 0;
         Stack<Character> stack = new Stack<>();
@@ -33,7 +35,7 @@ public class ParenthesisLoop{
                     break;
                 case ')':
                     if(stack.isEmpty() || stack.peek()!='('){
-                        result = 0;
+                        flag = false;
                         break;
                     }
                     if(inputValue.charAt(i-1)=='(') result += mul;
@@ -42,18 +44,26 @@ public class ParenthesisLoop{
                     break;
                 case ']':
                     if(stack.isEmpty() || stack.peek()!='['){
-                        result = 0;
+                        flag = false;
                         break;
                     }
                     if(inputValue.charAt(i-1)=='[') result += mul;
                     stack.pop();
                     mul /= 3;
                     break;
+                default:
+                    flag = false;
+                    break;
             }
         }
 
-        bw.write(!stack.isEmpty()? 0+"\n":result+"\n");
+        if(!flag || !stack.isEmpty()){
+            bw.write(0+"\n");
+        }else{
+            bw.write(result+"\n");
+        }
         bw.flush();
         bw.close();
+        
     }
 }
