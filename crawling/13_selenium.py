@@ -20,7 +20,7 @@ import time
 # browser.close() // browser tab 종료
 # browser.quit() // browser 종료
 
-browser = webdriver.Chrome("D:/visualStudioWorkspace/crawling/chromedriver.exe")
+browser = webdriver.Chrome("D:/workspace/crawling/chromedriver.exe")
 
 # 1. 네이버 이동
 browser.get("http://naver.com") # naver.com 으로 접속
