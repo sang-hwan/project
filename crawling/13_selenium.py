@@ -1,8 +1,6 @@
 from selenium import webdriver
 import time
 
-# 출처: https://www.youtube.com/watch?v=yQ20jZwDjTE&t=1035s&ab_channel=%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9
-
 # elem = browser.find_element_by_class_name("link_login") // class name 에 따른 태그 정보
 # elem.click() // 가져온 elem 클릭
 # browser.back() // 뒤로가기
@@ -20,7 +18,7 @@ import time
 # browser.close() // browser tab 종료
 # browser.quit() // browser 종료
 
-browser = webdriver.Chrome("D:/workspace/crawling/chromedriver.exe")
+browser = webdriver.Chrome("D:/visualStudioWorkspace/crawling/chromedriver.exe")
 
 # 1. 네이버 이동
 browser.get("http://naver.com") # naver.com 으로 접속

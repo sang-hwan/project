@@ -1,5 +1,3 @@
-// 출처: https://www.youtube.com/watch?v=_CsGSE5gwTA&list=PLpJDjPqxGWGrSGPUBqWlsJlcLF_grNClK&ab_channel=codeScalper
-
 // 사용변수
 const GAME_TIME = 9;
 let score = 0;

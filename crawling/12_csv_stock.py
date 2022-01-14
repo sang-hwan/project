@@ -2,8 +2,6 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 
-# 출처: https://www.youtube.com/watch?v=yQ20jZwDjTE&t=1035s&ab_channel=%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9
-
 url = "https://finance.naver.com/sise/sise_market_sum.nhn?sosok=0&page="
 
 filename = "시가총액1-200.csv"

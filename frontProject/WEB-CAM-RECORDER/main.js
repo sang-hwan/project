@@ -1,4 +1,3 @@
-// 출처: https://www.youtube.com/watch?v=g6RpmxvHAZY&list=PLpJDjPqxGWGrSGPUBqWlsJlcLF_grNClK&index=8&ab_channel=codeScalper
 // face-api.js 추천
 
 // dom
