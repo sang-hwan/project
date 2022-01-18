@@ -18,6 +18,8 @@ public class NumberCard_TimeOver{
     static boolean check[];
 
     public static void main(String[] args) throws IOException{
+        // 출처: https://www.acmicpc.net/problem/10815
+
         N = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
         arrN = new int[N];
