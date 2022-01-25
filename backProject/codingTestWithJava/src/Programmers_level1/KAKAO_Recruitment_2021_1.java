@@ -1,6 +1,6 @@
 package Programmers_level1;
 
-public class KAKAO2021_1 {
+public class KAKAO_Recruitment_2021_1 {
 
     // 출처:
     // https://programmers.co.kr/learn/courses/30/lessons/72410

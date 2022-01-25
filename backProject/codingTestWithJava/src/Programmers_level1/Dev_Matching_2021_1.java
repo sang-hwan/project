@@ -3,7 +3,7 @@ package Programmers_level1;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
-public class Dev_Matching2021_1 {
+public class Dev_Matching_2021_1 {
     // 출처:
     // https://programmers.co.kr/learn/courses/30/lessons/77484
 

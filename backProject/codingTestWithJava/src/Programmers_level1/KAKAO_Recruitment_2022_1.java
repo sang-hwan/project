@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class KAKAO2022_1 {
+public class KAKAO_Recruitment_2022_1 {
     // 출처: 
     // https://programmers.co.kr/learn/courses/30/lessons/92334
     // https://velog.io/@ujone/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%8B%A0%EA%B3%A0-%EA%B2%B0%EA%B3%BC-%EB%B0%9B%EA%B8%B0-JAVA
