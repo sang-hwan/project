@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package Sorting;
 
 import java.io.BufferedReader;
 import java.io.IOException;
