@@ -3,6 +3,8 @@ package Programmers_level1;
 public class KAKAO_Internship_2021_1 {
 
     public static int solution(String s) {
+        // 출처: https://programmers.co.kr/learn/courses/30/lessons/81301
+        
 
         s = s.replace("zero", "0");
         s = s.replace("one", "1");
