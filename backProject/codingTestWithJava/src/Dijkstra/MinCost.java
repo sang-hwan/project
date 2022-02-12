@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -29,7 +28,7 @@ public class MinCost{
     static StringTokenizer st;
     static int INF = 1_000_000_000;
     static int N, M;
-    static List<Node>[] list;
+    static ArrayList<ArrayList<Node>> list;
     static int[] cost;
 
     public static void main(String[] args) throws IOException{
@@ -38,22 +37,21 @@ public class MinCost{
 
         N = Integer.parseInt(br.readLine());
         M = Integer.parseInt(br.readLine());
-        list = new ArrayList[N+1];
-        cost = new int[N+1];
-
-        Arrays.fill(cost, INF);
-
-        for(int i=1; i<=N; i++){
-            list[i] = new ArrayList<>();
+        
+        list = new ArrayList<>();
+        for(int i=0; i<=N; i++){
+            list.add(new ArrayList<>());
         }
-
         for(int i=0; i<M; i++){
             st = new StringTokenizer(br.readLine());
             int start = Integer.parseInt(st.nextToken());
             int end = Integer.parseInt(st.nextToken());
             int weight = Integer.parseInt(st.nextToken());
-            list[start].add(new Node(end, weight));
+            list.get(start).add(new Node(end, weight));
         }
+        
+        cost = new int[N+1];
+        Arrays.fill(cost, INF);
 
         st = new StringTokenizer(br.readLine());
         int targetS = Integer.parseInt(st.nextToken());
@@ -77,7 +75,7 @@ public class MinCost{
             if(check[cur]==true) continue;
             check[cur] = true;
 
-            for(Node node: list[cur]){
+            for(Node node: list.get(cur)){
                 if(cost[node.end] > cost[cur] + node.weight){
                     cost[node.end] = cost[cur] + node.weight;
                     priorityQ.add(new Node(node.end, cost[node.end]));

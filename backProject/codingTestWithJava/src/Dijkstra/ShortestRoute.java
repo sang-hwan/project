@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -29,7 +28,7 @@ public class ShortestRoute{
     static StringTokenizer st;
     static int INF = 100_000_000;
     static int V, E, K;
-    static List<Node>[] list;
+    static ArrayList<ArrayList<Node>> list;
     static int[] distance;
 
     public static void main(String[] args) throws IOException{
@@ -41,22 +40,21 @@ public class ShortestRoute{
         V = Integer.parseInt(st.nextToken()); // 정점의 개수
         E = Integer.parseInt(st.nextToken()); // 간선의 개수
         K = Integer.parseInt(br.readLine()); // 출발 정점
-        list = new ArrayList[V+1];
-        distance = new int[V+1];
-
-        Arrays.fill(distance, INF);
         
-        for(int i=1; i<=V; i++){
-            list[i] = new ArrayList<>();
+        list = new ArrayList<>();
+        for(int i=0; i<=V; i++){
+            list.add(new ArrayList<>());
         }
-
         for(int i=0; i<E; i++){
             st = new StringTokenizer(br.readLine());
             int start = Integer.parseInt(st.nextToken());
             int end = Integer.parseInt(st.nextToken());
             int weight = Integer.parseInt(st.nextToken());
-            list[start].add(new Node(end, weight));
+            list.get(start).add(new Node(end, weight));
         }
+        
+        distance = new int[V+1];
+        Arrays.fill(distance, INF);
 
         StringBuilder sb = new StringBuilder();
         dijkstra(K);
@@ -81,7 +79,7 @@ public class ShortestRoute{
             if(check[cur]==true) continue;
             check[cur] = true;
 
-            for(Node node : list[cur]){
+            for(Node node : list.get(cur)){
                 if(distance[node.end] > distance[cur] + node.weight){
                     distance[node.end] = distance[cur] + node.weight;
                     priorityQ.add(new Node(node.end, distance[node.end]));
