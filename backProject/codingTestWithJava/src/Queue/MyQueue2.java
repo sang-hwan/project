@@ -53,17 +53,17 @@ public class MyQueue2 {
     static class MyQueue{
         private int[] queue;
         private int frontIndex = 0;
-        private int backIndext = -1;
+        private int backIndex = -1;
 
         MyQueue(){}
         MyQueue(int number){queue = new int[number];}
 
         public void push(int x){
-            queue[++backIndext] = x;
+            queue[++backIndex] = x;
         }
 
         public int size(){
-            return backIndext - frontIndex + 1;
+            return backIndex - frontIndex + 1;
         }
 
         public boolean isEmpty(){
@@ -94,7 +94,7 @@ public class MyQueue2 {
             if(isEmpty()){
                 return -1;
             }else{
-                return queue[backIndext];
+                return queue[backIndex];
             }
         }
     }
