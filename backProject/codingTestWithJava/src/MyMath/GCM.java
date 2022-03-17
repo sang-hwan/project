@@ -1,23 +1,27 @@
-package Math;
+package MyMath;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class GCDnGCM {
+public class GCM {
     public static void main(String[] args) throws IOException{
         // 출처:
-        // https://www.acmicpc.net/problem/2609
-        // https://st-lab.tistory.com/154
+        // https://www.acmicpc.net/problem/1934
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+        StringBuilder sb = new StringBuilder();
+        int T = Integer.parseInt(br.readLine());
+        for(int i=0; i<T; i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
 
-        System.out.println(Mygcd(a, b));
-        System.out.println(Mygcm(a, b));
+            sb.append(Mygcm(a, b)+"\n");
+        }
+
+        System.out.println(sb);
     }
 
     static int Mygcd(int a, int b){
