@@ -24,7 +24,7 @@ public class LBS {
 		A = new int[N+1];
  
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for (int i=0; i<N; i++) {
+		for (int i=1; i<=N; i++) {
 			A[i] = Integer.parseInt(st.nextToken());
 		}
  
@@ -36,10 +36,9 @@ public class LBS {
 			if(max < r_dp[i]+l_dp[i]){
 				max = r_dp[i]+l_dp[i];
 			}
-            System.out.println("i: "+i+", r_dp: "+r_dp[i]+", l_dp: "+l_dp[i]);
 		}
  
-		// System.out.println(max);
+		System.out.println(max-1);
 	}
 	
 	static void LIS(){
@@ -54,10 +53,10 @@ public class LBS {
 	}
  
 	static void LDS(){
-		for(int i=1; i<=N; i++){
+		for(int i=N; i>=1; i--){
 			l_dp[i] = 1;
-			for (int j=1; j<i; j++){
-				if(A[j]>A[i] && l_dp[i]==l_dp[j]){
+			for (int j=N; j>i; j--){
+				if(A[j]<A[i] && l_dp[i]==l_dp[j]){
 					l_dp[i] = l_dp[j]+1;
 				}
 			}
