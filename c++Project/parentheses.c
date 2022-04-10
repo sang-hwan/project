@@ -30,9 +30,9 @@ int main(void){
     Stacktype s;
     Stack_init(&s);
     char input[max_size] = {};
-    printf("수식 : ");
+    printf("괄호 입력 : ");
     scanf_s("%s", input, sizeof(input));
-    printf("괄호 수 : ");
+    printf("괄호 번호 : ");
     int i = 0, count = 1;
     while(input[i] != NULL){
         if(input[i] == '('){
