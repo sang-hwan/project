@@ -21,7 +21,7 @@ public class NextPermutation{
         
         if(nextPermutation()){
             for(int i=0; i<N; i++){
-                System.out.println(nums[i]+" ");
+                System.out.print(nums[i]+" ");
             }
         }else{
             System.out.println(-1);
